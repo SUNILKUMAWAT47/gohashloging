@@ -1,7 +1,7 @@
-##Flutter Login Package
-```
-    Flutter gohashlogin package used for create Login Screen and Signup Screen in your Flutter app.
-```
+#Flutter GoHashLogin Package
+
+  Flutter gohashlogin package help to make a login screen and Signup Screen
+
 
 # Installation
 ```
