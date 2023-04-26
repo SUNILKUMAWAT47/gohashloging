@@ -29,6 +29,7 @@ class DataPage extends StatefulWidget {
 class _DataPageState extends State<DataPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController cpassController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +41,13 @@ class _DataPageState extends State<DataPage> {
         useBackgroundImage: true,
         backgroundImage: "assets/background.jpg",
         textFormField: true,
-        labelText: const ["Email", "Password"],
+        labelText: const [
+          "Email",
+          "Password",
+        ],
         isObscure: true,
         sizedBox: const SizedBox(
-          height: 60.0,
+          height: 200.0,
         ),
         decoration: [
           InputDecoration(
@@ -76,13 +80,21 @@ class _DataPageState extends State<DataPage> {
         textController: [
           emailController,
           passwordController,
+          // cpassController,
         ],
         showLoginButton: true,
         loginButtonTitle: "Login",
+        buttonHeight: 60,
+        buttonWidth: 150,
+        ElevatedButton: ElevatedButton.styleFrom(
+          elevation: 20,
+          shape: StadiumBorder(),
+          backgroundColor: Colors.blue,
+        ),
         showForgotButton: true,
-        buttonColor: Colors.blue,
         onLoginPressed: () {},
-        showOngoLogin: true,
+        showAlreadyLogin: true,
+        padding: EdgeInsets.only(bottom: 24),
         child: const Text.rich(
           TextSpan(
             text: "Don't have an Account?",
@@ -94,7 +106,7 @@ class _DataPageState extends State<DataPage> {
             ],
           ),
         ),
-        ongoLoginPressed: () {},
+        onAlreadyLoginPressed: () {},
         onForgotPressed: () {},
       ),
     );

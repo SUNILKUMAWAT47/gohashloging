@@ -27,10 +27,13 @@ GoLogin(
         useBackgroundImage: true,
         backgroundImage: "assets/background.jpg",
         textFormField: true,
-        labelText: const ["Email", "Password"],
+        labelText: const [
+          "Email",
+          "Password",
+        ],
         isObscure: true,
         sizedBox: const SizedBox(
-          height: 60.0,
+          height: 200.0,
         ),
         decoration: [
           InputDecoration(
@@ -63,13 +66,21 @@ GoLogin(
         textController: [
           emailController,
           passwordController,
+          // cpassController,
         ],
         showLoginButton: true,
         loginButtonTitle: "Login",
+        buttonHeight: 60,
+        buttonWidth: 150,
+        ElevatedButton: ElevatedButton.styleFrom(
+          elevation: 20,
+          shape: StadiumBorder(),
+          backgroundColor: Colors.blue,
+        ),
         showForgotButton: true,
-        buttonColor: Colors.blue,
         onLoginPressed: () {},
-        showOngoLogin: true,
+        showAlreadyLogin: true,
+        padding: EdgeInsets.only(bottom: 24),
         child: const Text.rich(
           TextSpan(
             text: "Don't have an Account?",
@@ -81,7 +92,7 @@ GoLogin(
             ],
           ),
         ),
-        ongoLoginPressed: () {},
+        onAlreadyLoginPressed: () {},
         onForgotPressed: () {},
       ),
 
